@@ -35,7 +35,7 @@ func main() {
 	APIIDPtr := flag.String("API_ID", "xxxxxxxxxxxxxxx", "API ID")
 	APIKeyPtr := flag.String("API_KEY", "xxxxxxxxxxxxxxx", "API Key")
 	GroupPtr := flag.String("GROUP", "mygroup-users", "Name of Verify directory group")
-	EmailPtr := flag.String("EMAIL", "foulkesb@gmail.com", "Email address of user")
+	EmailPtr := flag.String("EMAIL", "ben.foulkes@ca.ibm.com", "Email address of user")
 	TenantPtr := flag.String("TENANT", "techzone-test.verify.ibm.com/", "Tenant URL")
 	ActionPtr := flag.String("ACTION", "lookup", "Verify API Action, lookup, onboard, remove")
 	flag.Parse()
