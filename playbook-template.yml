@@ -12,23 +12,13 @@
 
     - name: Set facts for supplied variables to convert from json
       ansible.builtin.set_fact:
-        account_json: "{{ account_data|from_json }}"
-        environment_json: "{{ environment_data|from_json }}"
-        service_instances_json: "{{ service_instances|from_json }}"
         extra_variables_json: "{{ extra_variables|from_json }}"
 
-    - name: Set facts from supplied json data
-      ansible.builtin.set_fact:
-        apikey: "{{ account_json['account_api_key'] }}"
 
     - name: Show all variables
       ansible.builtin.debug:
         msg: 
-         - "environment_data: {{ environment_json }}"
-         - "service_instances: {{ service_instances_json }}"
-         - "account_data: {{ account_json }}"
          - "extra_variables: {{ extra_variables_json }}"
-         - "apikey: {{ apikey }}"
 
 # # Resource Group setup
 #     - name: Check resource group '{{ resource_group_name }}' exists
