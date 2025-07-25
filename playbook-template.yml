@@ -8,7 +8,7 @@
   tasks:
     - name: Fetch the variables from var file
       ansible.builtin.include_vars:
-        file: vars.yml
+        file: extra_vars.yml
 
     - name: Set facts for supplied variables to convert from json
       ansible.builtin.set_fact:
